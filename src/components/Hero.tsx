@@ -156,7 +156,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Download className="w-5 h-5" />
-              <span>Download CV</span>
+              <span>Download Resume</span>
             </motion.a>
           </motion.div>
 
