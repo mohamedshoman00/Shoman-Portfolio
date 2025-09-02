@@ -16,7 +16,7 @@ const achievements = [
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "5+ Clients/Users",
+    title: "5+ Clients",
     description: "Satisfied students and platform users"
   },
   {
