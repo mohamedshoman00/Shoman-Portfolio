@@ -256,11 +256,8 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
+          <div
+           
           >
             <motion.form
               onSubmit={handleSubmit}
@@ -392,7 +389,7 @@ const Contact: React.FC = () => {
                 )}
               </motion.button>
             </motion.form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
