@@ -4,7 +4,7 @@ import { Code, Palette, Zap, Users, Coffee, Clock, Target, Lightbulb } from 'luc
 
 const About: React.FC = () => {
   const stats = [
-    { number: "4+", label: "Years Experience", icon: <Clock className="w-5 h-5" /> },
+    { number: "2+", label: "Years Experience", icon: <Clock className="w-5 h-5" /> },
     { number: "2+", label: "Projects Completed", icon: <Target className="w-5 h-5" /> }, // Outly + Faster Education
     { number: "5+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> }, // عملاء من مشاريعك التعليمية
     { number: "1000+", label: "Cups of Coffee", icon: <Coffee className="w-5 h-5" /> } // إضافي للمرح 😄

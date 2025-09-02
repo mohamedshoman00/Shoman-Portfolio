@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
 const achievements = [
   {
     icon: <Award className="w-6 h-6" />,
-    title: "4+ Years Experience",
+    title: "2+ Years Experience",
     description: "Professional frontend development with React, Next.js, and Tailwind CSS"
   },
   {
