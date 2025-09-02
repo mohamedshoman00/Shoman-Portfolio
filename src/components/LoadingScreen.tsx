@@ -11,7 +11,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isLoading }) => {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
@@ -36,11 +36,11 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isLoading }) => {
               <Code className="w-full h-full" />
             </motion.div>
             <motion.h2 
-              className="text-2xl font-bold mb-2"
+              className="mb-2 text-2xl font-bold"
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              John Doe
+             Mohamed Shoman
             </motion.h2>
             <motion.p 
               className="text-gray-600 dark:text-gray-300"

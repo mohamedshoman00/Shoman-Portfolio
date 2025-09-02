@@ -29,24 +29,24 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
 
   return (
     <motion.header 
-      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-700"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-4">
           <motion.div 
             className="text-2xl font-bold text-blue-600 dark:text-blue-400"
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            JD
+            MS
           </motion.div>
 
           {/* Desktop Navigation */}
           <motion.nav 
-            className="hidden md:flex space-x-8"
+            className="hidden space-x-8 md:flex"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -79,7 +79,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
           >
             <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="p-2 text-gray-700 transition-colors rounded-md dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               whileHover={{ scale: 1.1, rotate: 180 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
             {/* Mobile menu button */}
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300"
+              className="p-2 text-gray-700 rounded-md md:hidden dark:text-gray-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -147,7 +147,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav 
-              className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700"
+              className="py-4 border-t border-gray-200 md:hidden dark:border-gray-700"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
