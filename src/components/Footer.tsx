@@ -78,6 +78,16 @@ const Footer: React.FC = () => {
                   LinkedIn
                 </a>
               </li>
+              <li>
+                <a 
+                  href="https://wa.me/201223330261" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-green-400"
+                >
+                  WhatsApp
+                </a>
+              </li>
              
             </ul>
           </div>

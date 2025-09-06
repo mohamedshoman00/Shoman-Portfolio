@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail, Download, Code, Sparkles } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download, Code, Sparkles, MessageCircle } from 'lucide-react';
 import resume from '../assets/resume.pdf'; // عدّل المسار حسب مكان الملف
 
 const Hero: React.FC = () => {
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="mb-8"
+            className="mb-8 mt-4"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6, type: "spring", stiffness: 100 }}
@@ -113,7 +113,8 @@ const Hero: React.FC = () => {
             {[
               { href: "https://github.com/mohamedshoman00", icon: Github },
               { href: "https://www.linkedin.com/in/mohamedshoman00", icon: Linkedin },
-              { href: "mailto:mohamedshoman242@gmail.com", icon: Mail }
+              { href: "mailto:mohamedshoman242@gmail.com", icon: Mail },
+              { href: "https://wa.me/201223330261", icon: MessageCircle }
             ].map((social, index) => (
               <motion.a
                 key={index}

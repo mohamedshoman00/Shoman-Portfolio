@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter,MessageCircle   } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
@@ -81,6 +81,12 @@ const Contact: React.FC = () => {
       icon: <Linkedin className="w-5 h-5" />,
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/mohamedshoman00",
+      color: "hover:text-blue-600"
+    },
+    {
+      icon: <MessageCircle className="w-5 h-5" />,
+      name: "MessageCircle  ",
+      url: "https://wa.me/201223330261",
       color: "hover:text-blue-600"
     },
   ];
