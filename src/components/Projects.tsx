@@ -228,9 +228,8 @@ const Projects: React.FC = () => {
                     <span>Code</span>
                   </motion.a>
                 </motion.div>
-              </div>
               <motion.div
-                className="flex items-center mb-4 space-x-4 text-sm text-gray-500 dark:text-gray-400"
+                className="flex items-center  mt-4 space-x-4 text-sm text-gray-500 dark:text-gray-400"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -248,6 +247,7 @@ const Projects: React.FC = () => {
                   <span>{project.stats.views}</span>
                 </div>
               </motion.div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
