@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, Star, Eye, GitBranch } from "lucide-react";
 import imgpro1 from '../assets/project1.png'
 import imgpro2 from '../assets/project2.png'
+import imgpro3 from '../assets/project3.png'
 const Projects: React.FC = () => {
   const projects = [
   {
@@ -19,14 +20,25 @@ const Projects: React.FC = () => {
   {
     title: "Faster Education Platform",
     description:
-      "Faster Education Platform is an educational web and mobile application designed to streamline communication between teachers and students. It offers course management, real-time notifications, assignment tracking, and interactive features such as quizzes and discussion forums. Built with React, Next.js, and Tailwind CSS for the web, and a mobile app available on Google Play and the App Store, the platform delivers a seamless learning experience across devices with a clean and intuitive UI/UX.",
+    "Faster Education Platform is a web and mobile application designed to enhance communication between teachers and students. It provides course management, real-time notifications, assignment tracking, quizzes, and discussion forums. Built with React, Next.js, and Tailwind CSS, the platform delivers a seamless learning experience with a clean and intuitive UI/UX.",
     image: imgpro1, // أو أي صورة واقعية للمشروع
-    tech: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase"],
+    tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
     liveUrl: "https://faster-education.com/",
     githubUrl: "https://github.com/mohamedshoman00/",
     featured: true,
     stats: { stars: 60, forks: 12, views: "1.5k" },
   },
+  {
+  title: "E-Commerce Web Application — Mare Boutique",
+  description:
+    "A modern e-commerce web application built with Next.js and Tailwind CSS, featuring secure authentication, role-based Admin and User Dashboards, full product management, search and filter functionalities, shopping cart, and InstaPay QR code payment integration. The platform provides a responsive, fast, and user-friendly shopping experience across all devices.",
+  image: imgpro3, // ضع صورة واقعية للمشروع
+  tech: ["Next.js", "Tailwind CSS", "React", "TypeScript",],
+  liveUrl: "https://mare-boutique.com/", // رابط المشروع المباشر
+  githubUrl: "https://github.com/mohamedshoman00/", // رابط GitHub
+  featured: true,
+  stats: { stars: 0, forks: 0, views: "500+" },
+}
     // {
     //   title: "Weather Forecast App",
     //   description:
@@ -120,7 +132,7 @@ const Projects: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}>Projects
           </motion.h2>
           <motion.p
-            className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-300"
+            className="max-w-4xl mx-auto text-xl text-gray-600 dark:text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -76,7 +76,7 @@ const About: React.FC = () => {
             About Me
           </motion.h2>
           <motion.p
-            className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-300"
+            className="max-w-4xl mx-auto text-xl text-gray-600 dark:text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
