@@ -6,39 +6,39 @@ import imgpro2 from '../assets/project2.png'
 import imgpro3 from '../assets/project3.png'
 const Projects: React.FC = () => {
   const projects = [
-  {
-    title: "Outly Project",
-   description: 
-    "Built a location-based web app for discovering nearby cafés with ratings and recommendations. Developed using React.js, Next.js, and modern UI libraries for responsive design. Integrated maps and geolocation APIs to deliver personalized suggestions, with a clean UI/UX focusing on usability and smooth navigation.",
-    image: imgpro2, // استخدم صورة المشروع أو سكرين شوت
-    tech: ["React", "Next.js", "Tailwind CSS", "TypeScript", "REST API"],
-    liveUrl: "https://outly-project.vercel.app/",
-    githubUrl: "https://github.com/mohamedshoman00/OutlyProject",
-    featured: true,
-    stats: { stars: 45, forks: 10, views: "1.2k" },
-  },
-  {
-    title: "Faster Education Platform",
-    description:
-    "Faster Education Platform is a web and mobile application designed to enhance communication between teachers and students. It provides course management, real-time notifications, assignment tracking, quizzes, and discussion forums. Built with React, Next.js, and Tailwind CSS, the platform delivers a seamless learning experience with a clean and intuitive UI/UX.",
-    image: imgpro1, // أو أي صورة واقعية للمشروع
-    tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://faster-education.com/",
-    githubUrl: "https://github.com/mohamedshoman00/",
-    featured: true,
-    stats: { stars: 60, forks: 12, views: "1.5k" },
-  },
-  {
-  title: "E-Commerce Web Application — Mare Boutique",
-  description:
-    "A modern e-commerce web application built with Next.js and Tailwind CSS, featuring secure authentication, role-based Admin and User Dashboards, full product management, search and filter functionalities, shopping cart, and InstaPay QR code payment integration. The platform provides a responsive, fast, and user-friendly shopping experience across all devices.",
-  image: imgpro3, // ضع صورة واقعية للمشروع
-  tech: ["Next.js", "Tailwind CSS", "React", "TypeScript",],
-  liveUrl: "https://mare-boutique.com/", // رابط المشروع المباشر
-  githubUrl: "https://github.com/mohamedshoman00/", // رابط GitHub
-  featured: true,
-  stats: { stars: 0, forks: 0, views: "500+" },
-}
+    {
+      title: "Outly Project",
+      description:
+        "Built a location-based web app for discovering nearby cafés with ratings and recommendations. Developed using React.js, Next.js, and modern UI libraries for responsive design. Integrated maps and geolocation APIs to deliver personalized suggestions, with a clean UI/UX focusing on usability and smooth navigation.",
+      image: imgpro2, // استخدم صورة المشروع أو سكرين شوت
+      tech: ["React", "Next.js", "Tailwind CSS", "TypeScript", "REST API"],
+      liveUrl: "https://outly-project.vercel.app/",
+      githubUrl: "https://github.com/mohamedshoman00/OutlyProject",
+      featured: true,
+      stats: { stars: 45, forks: 10, views: "1.2k" },
+    },
+    {
+      title: "Faster Education Platform",
+      description:
+        "Faster Education Platform is a web and mobile application designed to enhance communication between teachers and students. It provides course management, real-time notifications, assignment tracking, quizzes, and discussion forums. Built with React, Next.js, and Tailwind CSS, the platform delivers a seamless learning experience with a clean and intuitive UI/UX.",
+      image: imgpro1, // أو أي صورة واقعية للمشروع
+      tech: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      liveUrl: "https://faster-education.com/",
+      githubUrl: "https://github.com/mohamedshoman00/",
+      featured: true,
+      stats: { stars: 60, forks: 12, views: "1.5k" },
+    },
+    {
+      title: "E-Commerce Web Application — Mare Boutique",
+      description:
+        "A modern e-commerce web application built with Next.js and Tailwind CSS, featuring secure authentication, role-based Admin and User Dashboards, full product management, search and filter functionalities, shopping cart, and InstaPay QR code payment integration. The platform provides a responsive, fast, and user-friendly shopping experience across all devices.",
+      image: imgpro3, // ضع صورة واقعية للمشروع
+      tech: ["Next.js", "Tailwind CSS", "React", "TypeScript",],
+      liveUrl: "https://mare-boutique.com/", // رابط المشروع المباشر
+      githubUrl: "https://github.com/mohamedshoman00/", // رابط GitHub
+      featured: true,
+      stats: { stars: 0, forks: 0, views: "500+" },
+    }
     // {
     //   title: "Weather Forecast App",
     //   description:
@@ -137,7 +137,7 @@ const Projects: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}>
-         Here are some of my recent projects demonstrating my expertise in frontend development, React/Next.js, UI/UX design, and crafting practical, user-friendly solutions.
+            Here are some of my recent projects demonstrating my expertise in frontend development, React/Next.js, UI/UX design, and crafting practical, user-friendly solutions.
           </motion.p>
         </motion.div>
         {/* Featured Projects */}
@@ -217,7 +217,7 @@ const Projects: React.FC = () => {
                     <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                   </motion.a>
-                  <motion.a
+                  {/* <motion.a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -226,27 +226,27 @@ const Projects: React.FC = () => {
                     whileTap={{ scale: 0.98 }}>
                     <Github className="w-4 h-4" />
                     <span>Code</span>
-                  </motion.a>
+                  </motion.a> */}
                 </motion.div>
-              <motion.div
-                className="flex items-center  mt-4 space-x-4 text-sm text-gray-500 dark:text-gray-400"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.4 }}>
-                <div className="flex items-center space-x-1">
-                  <Star className="w-3 h-3" />
-                  <span>{project.stats.stars}</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <GitBranch className="w-3 h-3" />
-                  <span>{project.stats.forks}</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <Eye className="w-3 h-3" />
-                  <span>{project.stats.views}</span>
-                </div>
-              </motion.div>
+                <motion.div
+                  className="flex items-center  mt-4 space-x-4 text-sm text-gray-500 dark:text-gray-400"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.4 }}>
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-3 h-3" />
+                    <span>{project.stats.stars}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <GitBranch className="w-3 h-3" />
+                    <span>{project.stats.forks}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Eye className="w-3 h-3" />
+                    <span>{project.stats.views}</span>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
