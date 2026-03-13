@@ -23,12 +23,19 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+
+      // wait e.g. 400ms, then close menu
+      setTimeout(() => {
+        setIsMenuOpen(false);
+      }, 200);
+    } else {
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
+
   return (
-    <motion.header 
+    <motion.header
       className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md dark:border-gray-700"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -36,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
     >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4">
-          <motion.div 
+          <motion.div
             className="text-2xl font-bold text-blue-600 dark:text-blue-400"
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -45,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
           </motion.div>
 
           {/* Desktop Navigation */}
-          <motion.nav 
+          <motion.nav
             className="hidden space-x-8 md:flex"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -55,11 +62,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === item.id
+                  ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                  : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                  }`}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: -20 }}
@@ -71,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
             ))}
           </motion.nav>
 
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -146,31 +152,30 @@ const Header: React.FC<HeaderProps> = ({ activeSection, isDarkMode, toggleTheme 
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.nav 
+            <motion.nav
               className="py-4 border-t border-gray-200 md:hidden dark:border-gray-700"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-            {navItems.map((item) => (
-              <motion.button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                  activeSection === item.id
+              {navItems.map((item) => (
+                <motion.button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${activeSection === item.id
                     ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
                     : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * navItems.indexOf(item), duration: 0.3 }}
-                whileHover={{ x: 5 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {item.label}
-              </motion.button>
-            ))}
+                    }`}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * navItems.indexOf(item), duration: 0.3 }}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {item.label}
+                </motion.button>
+              ))}
             </motion.nav>
           )}
         </AnimatePresence>
